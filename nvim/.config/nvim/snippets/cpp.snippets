@@ -1,0 +1,58 @@
+snippet _tcfb
+	int tc; cin >> tc;
+	for (int _ = 1; _ <= tc; ++_) {
+		cout << "Case #" << _ << ": ";
+		$0
+	}
+snippet _tc
+	int tc; cin >> tc;
+	while (tc--) {
+		$0
+	}
+snippet _cpp
+	#include "bits/stdc++.h"
+
+	using namespace std;
+
+	#ifdef VDH 
+	#include "debug.hpp"
+	#else
+	#define dbg(...) 22
+	#endif
+
+	#define fi first
+	#define se second 
+	#define sz(x) (int)x.size()
+	#define all(x) x.begin(), x.end()
+	#define i32 0x3f3f3f3f
+	#define i64 0x1010101010101010
+
+	using ll = long long;
+
+	mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+	ll rand(ll l, ll r) { return l + rng() % (r - l + 1); }
+
+	template<class A, class B> bool chmax(A &a, B b) { return a < b && (a = b, true); }
+	template<class A, class B> bool chmin(A &a, B b) { return a > b && (a = b, true); }
+
+	void setIO(string s = "") {
+		cin.tie(0)->sync_with_stdio(0);
+		cout << fixed << setprecision(10);
+	 
+		auto setIn = [&](string s) { freopen(s.c_str(), "r", stdin); };
+		auto setOut = [&](string s) { freopen(s.c_str(), "w", stdout); };
+		if (sz(s)) setIn(s+".in"), setOut(s+".out");
+	}    
+
+	void solve() {
+	}
+
+	int main() {
+		setIO();
+
+		int tc = 1;
+		//$0 cin >> tc;
+		while (tc--) {
+			solve();
+		}
+	}

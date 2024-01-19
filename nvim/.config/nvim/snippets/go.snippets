@@ -1,0 +1,131 @@
+snippet _gocp
+	package main
+
+	import (
+		"bufio"
+		"fmt"
+		"os"
+	)
+
+	func solve() {
+	}
+
+	func main() {
+		defer _w.Flush()
+		var t = 1
+		scanf("%d\n", &t)
+		for t > 0 {
+			solve()
+			t -= 1
+		}
+	}
+
+
+
+
+	// -- I/O -- 
+	var _r = bufio.NewReader(os.Stdin)
+	var _w = bufio.NewWriter(os.Stdout)
+	func scanf(format string, a ...interface{}) { fmt.Fscanf(_r, format, a...) }
+	func printf(format string, a ...interface{}) { fmt.Fprintf(_w, format, a...) }
+
+	// -- Modification --
+	type Types interface {
+		int | int32 | int64 | float32 | float64 | string
+	}
+
+	func reverse[T Types](a []T) []T {
+		n := len(a)
+		for i := 0; i < n - 1 - i; i += 1 {
+			a[i], a[n - 1 - i] = a[n - 1 - i], a[i]
+		}
+		return a
+	}
+
+	// -- Math --
+	const i32 = 1 << 30
+	const i64 = 1 << 61
+
+	type Number interface {
+		int | int32 | int64 | float32 | float64
+	}
+
+	func abs[T Number](a T) T {
+		if a < 0 {
+			return -a
+		}
+		return a
+	}
+	 
+	func max[T Number](a ...T) T {
+		m := a[0]
+		for _, v := range a {
+			if v > m {
+				m = v
+			}
+		}
+		return m
+	}
+	 
+	func min[T Number](a ...T) T {
+		m := a[0]
+		for _, v := range a {
+			if v < m {
+				m = v
+			}
+		}
+		return m
+	}
+
+	func gcd(a, b int) int {
+		for b > 0 {
+			a, b = b, a % b
+		}
+		return a
+	}
+
+	func lcm(x, y int) int {
+		return x * y / gcd(x, y)
+	}
+
+	// -- Data Structures --
+	// from: https://github.com/PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang/tree/master
+
+	// Queue
+	type Queue []*Order
+
+	type Order struct {
+		priority     int
+		quantity     int
+		product      string
+		customerName string
+	}
+
+	func (order *Order) New(priority int, quantity int, product string, customerName string) {
+		order.priority = priority
+		order.quantity = quantity
+		order.product = product
+		order.customerName = customerName
+	}
+
+	func (queue *Queue) Push(order *Order) {
+		if len(*queue) == 0 {
+			*queue = append(*queue, order)
+		} else {
+
+			var appended bool
+			appended = false
+			var i int
+			var addedOrder *Order
+			for i, addedOrder = range *queue {
+				if order.priority > addedOrder.priority {
+					*queue = append((*queue)[:i], append(Queue{order}, (*queue)[i:]...)...)
+					appended = true
+					break
+				}
+			}
+			if !appended {
+				*queue = append(*queue, order)
+			}
+		}
+	}
