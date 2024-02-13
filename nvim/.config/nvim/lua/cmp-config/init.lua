@@ -113,4 +113,7 @@ require('lspconfig')['pyright'].setup {
 require('lspconfig')['gopls'].setup {
   capabilities = capabilities
 }
+require('lspconfig')['html'].setup {
+  capabilities = capabilities
+}
 
