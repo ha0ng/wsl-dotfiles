@@ -4,7 +4,8 @@ return require('packer').startup(function(use)
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-lualine/lualine.nvim'
     -- use 'xiyaowong/transparent.nvim'
-    use 'akinsho/bufferline.nvim'
+    -- use 'akinsho/bufferline.nvim'
+    use 'romgrk/barbar.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -26,7 +27,6 @@ return require('packer').startup(function(use)
     use 'akinsho/toggleterm.nvim'
     use 'nvim-tree/nvim-web-devicons' 
     use 'lewis6991/gitsigns.nvim' 
-    use 'romgrk/barbar.nvim'
     -- use 'shaunsingh/nord.nvim'
     use 'gbprod/nord.nvim'
     use 'petertriho/nvim-scrollbar'

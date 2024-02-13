@@ -16,6 +16,7 @@ require('scrollbar-config')
 -- require('presence-config')
 require('indent-blankline-config')
 require('colorizer-config')
+require('web-devicons-config')
 
 
 vim.cmd[[
