@@ -28,11 +28,6 @@ let g:nord_italic = v:false
 let g:nord_uniform_diff_background = v:true
 let g:nord_bold = v:false
 
-autocmd FileType cpp nnoremap <F5> :!download_test.py<CR>
-autocmd FileType cpp nnoremap <F10> :term judge_cpp %:r<CR>
-autocmd FileType cpp nnoremap <F9> :term run_cpp %:r<CR>
-autocmd FileType cpp nnoremap <F8> :Telescope find_files cwd=/mnt/c/users/admin/Documents/cplib<CR>
-
 augroup numbertoggle
     autocmd!
 
