@@ -116,4 +116,7 @@ require('lspconfig')['gopls'].setup {
 require('lspconfig')['html'].setup {
   capabilities = capabilities
 }
+require('lspconfig')['cssls'].setup {
+  capabilities = capabilities
+}
 
