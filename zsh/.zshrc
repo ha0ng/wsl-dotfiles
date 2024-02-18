@@ -116,6 +116,7 @@ alias vi="nvim"
 alias dt="download_prob.py"
 alias vh="cd /mnt/c/users/admin/"
 alias tmux-reload="tmux source-file ~/.tmux.conf"
+alias quit="tmux detach -P"
 
 fpath+=$HOME/.zsh/typewritten
 autoload -U promptinit; promptinit
