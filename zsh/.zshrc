@@ -3,6 +3,10 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# Spawn tmux
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # cd /mnt/c/users/admin/
 
 # Set name of the theme to load --- if set to "random", it will
