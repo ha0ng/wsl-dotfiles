@@ -1,1 +1,1 @@
-/mnt/c/Users/ADMIN/.wezterm.lua
+/mnt/c/Users/haong/.wezterm.lua

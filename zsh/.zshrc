@@ -80,8 +80,8 @@ plugins=(
     zsh-autosuggestions
 )
 
-path+=('/home/hoangvan/.scripts')
-path+=('/home/hoangvan/.scripts/CP')
+path+=('/home/haong/.scripts')
+path+=('/home/haong/.scripts/CP')
 export PATH
 
 source $ZSH/oh-my-zsh.sh
@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 alias cls="clear"
 alias vi="nvim"
 alias dt="download_prob.py"
-alias vh="cd /mnt/c/users/admin/"
+alias vh="cd /mnt/c/users/haong/"
 alias tmux-reload="tmux source-file ~/.tmux.conf"
 alias quit="tmux detach -P"
 
