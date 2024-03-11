@@ -117,6 +117,8 @@ alias dt="download_prob.py"
 alias vh="cd /mnt/c/users/haong/"
 alias tmux-reload="tmux source-file ~/.tmux.conf"
 alias quit="tmux detach -P"
+alias exp="explorer.exe . &"
+alias wez="wezterm.exe &"
 
 fpath+=$HOME/.zsh/typewritten
 autoload -U promptinit; promptinit
